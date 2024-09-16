@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swap Interface</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1c1c1c;
+            color: white;
+        }
+        .container {
+            display: flex;
+        }
+        aside {
+            width: 240px;
+            background-color: #2a2a2a;
+            height: 100vh;
+            padding: 20px;
+        }
+        aside h2 {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        aside ul {
+            list-style: none;
+        }
+        aside ul li {
+            margin: 20px 0;
+        }
+        aside ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+        }
+        main {
+            flex-grow: 1;
+            padding: 20px;
+            background-color: #181818;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header input {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+        header button {
+            padding: 10px 20px;
+            background-color: #1a73e8;
+            border: none;
+            border-radius: 5px;
+            color: white;
+        }
+        section {
+            margin-top: 40px;
+            background-color: #333;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .swap-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .swap-row select, .swap-row input {
+            background-color: #444;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            width: 100%;
+        }
+        .swap-row select {
+            width: 70px;
+        }
+        .swap-row button {
+            padding: 10px 20px;
+            background-color: #1a73e8;
+            border: none;
+            border-radius: 5px;
+            color: white;
+        }
+        .footer-text {
+            font-size: 12px;
+            margin-top: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <aside>
+            <h2>METAMASK Portfolio</h2>
+            <ul>
+                <li><a href="#">Overview</a></li>
+                <li><a href="#">Move crypto</a></li>
+                <li><a href="#">Tokens</a></li>
+                <li><a href="#">NFTs</a></li>
+                <li><a href="#">Games</a></li>
+            </ul>
+            <p class="footer-text">Terms of Use</p>
+        </aside>
+
+        <main>
+            <header>
+                <input type="text" placeholder="Search for a token...">
+                <button>Connect wallet</button>
+            </header>
+
+            <section>
+                <div class="swap-row">
+                    <label for="swap-from">Swap from</label>
+                    <select id="swap-from">
+                        <option value="eth">ETH</option>
+                    </select>
+                    <input type="text" placeholder="0">
+                </div>
+
+                <div class="swap-row">
+                    <label for="swap-to">Swap to</label>
+                    <select id="swap-to">
+                        <option value="">Select a token</option>
+                    </select>
+                </div>
+
+                <div class="swap-row">
+                    <button>Swap</button>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

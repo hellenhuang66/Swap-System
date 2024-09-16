@@ -5,9 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ title }}</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #1A1A1A;
+            color: #FFFFFF;
+            font-family: Arial, sans-serif;
+        }
+        .navbar {
+            background-color: #20232A;
+        }
+        .navbar-brand, .nav-link {
+            color: #61DAFB !important;
+        }
+        .container {
+            margin-top: 30px;
+        }
+        .form-control {
+            background-color: #2C2C2C;
+            border: none;
+            color: #FFFFFF;
+        }
+        .form-control:focus {
+            box-shadow: none;
+            border-color: #61DAFB;
+        }
+        .form-check-label {
+            color: #FFFFFF;
+        }
+        .btn-primary {
+            background-color: #61DAFB;
+            border: none;
+        }
+        .btn-primary:hover {
+            background-color: #53C5E8;
+        }
+        .alert {
+            background-color: #333;
+            color: #FFFFFF;
+            border-color: #61DAFB;
+        }
+        h2 {
+            color: #61DAFB;
+        }
+    </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg">
         <a class="navbar-brand" href="{{ url_for('home') }}">User System</a>
         <div class="collapse navbar-collapse">
             <ul class="navbar-nav ml-auto">

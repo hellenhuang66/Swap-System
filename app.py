@@ -17,9 +17,9 @@ bcrypt = Bcrypt(app)
 mysql = MySQL(app)
 
 @app.route('/')
-def home():
+def swap_index():
     if 'loggedin' in session:
-        return render_template('home.html', username=session['username'])
+        return render_template('swap_index.html', username=session['username'])
     return redirect(url_for('login'))
 
 @app.route('/login', methods=['GET', 'POST'])
